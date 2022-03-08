@@ -27,32 +27,27 @@ public class TicTacToe {
     
         public static void displayGameBoard() {
         
-        System.out.println("Welcome to Tic Tac Toe!");
-        String symbol;
-        Scanner sc = new Scanner(System.in);
-        System.out.print("Choose your preferred symbol X or O >> ");               
-        symbol = sc.next();
-        while(!symbol.equals("X") && !symbol.equals("x") && !symbol.equals("O") && !symbol.equals("o")) {       //Ensuring correct input
-            System.out.print("Must choose either X or O. Try again >> ");
+            System.out.println("Welcome to Tic Tac Toe!");
+            String symbol;
+            Scanner sc = new Scanner(System.in);
+            System.out.print("Choose your preferred symbol X or O >> ");               
             symbol = sc.next();
-        }
-        symbol = symbol.toUpperCase();
-        char sym = symbol.charAt(0);
-        
-        System.out.println();
-        for(int i = 0; i < gameBoard.length; i++) {
-            for(int j = 0; j < gameBoard.length; j++) {
-                
-                System.out.print(gameBoard[i][j]);
+            while(!symbol.equals("X") && !symbol.equals("x") && !symbol.equals("O") && !symbol.equals("o")) {       //Ensuring correct input
+                System.out.print("Must choose either X or O. Try again >> ");
+                symbol = sc.next();
             }
+            symbol = symbol.toUpperCase();
+            char sym = symbol.charAt(0);
+        
             System.out.println();
-        }
-        
-        userPosition(gameBoard, sym, bool);
-        
-        
-
-    }       
+            for(int i = 0; i < gameBoard.length; i++) {
+                for(int j = 0; j < gameBoard.length; j++) { 
+                    System.out.print(gameBoard[i][j]);
+                }
+                   System.out.println();
+            }  
+            userPosition(gameBoard, sym, bool);
+        }       
         public static void userPosition(String[][] board, char s, boolean b) {
             int userPosition;
             Scanner keyboard = new Scanner(System.in);
