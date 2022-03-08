@@ -1,2 +1,2 @@
-# side-project
-Menu
+# side-projects
+Repository for my projects
